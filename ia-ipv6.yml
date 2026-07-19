@@ -18,7 +18,7 @@ topology:
       type: ixr-d3
       #startup-config: configs/rt-prov2.cfg 
 
-     rt-core:
+    rt-core:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
       type: ixr-d3
