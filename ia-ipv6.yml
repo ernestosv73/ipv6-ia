@@ -50,6 +50,14 @@ topology:
       kind: linux
       image: docker.io/esanchezv/kaliipv6:latest  
 
+    cliente-ISP:
+      kind: linux
+      image: docker.io/esanchezv/kaliipv6:latest  
+
+    mgmt-ISP:
+      kind: linux
+      image: docker.io/esanchezv/kaliipv6:latest    
+
   links:
     - endpoints: ["rt-provider1:e1-1", "rt-core:e1-1"]
     - endpoints: ["rt-provider2:e1-1", "rt-core:e1-2"]
@@ -59,5 +67,7 @@ topology:
     - endpoints: ["rt-transit:e1-4", "rt-cloudflare:e1-1"]
     - endpoints: ["rt-google:e1-2", "DNS-google:eth1"]
     - endpoints: ["rt-cloudflare:e1-2", "DNS-cloudflare:eth1"]
+    - endpoints: ["cliente-ISP:eth1", "rt-core:e1-3"]
+    - endpoints: ["mgmt-ISP:eth1", "rt-core:e1-4"]
     
 
