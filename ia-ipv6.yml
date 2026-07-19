@@ -41,7 +41,14 @@ topology:
       image: ghcr.io/nokia/srlinux:24.10.1
       type: ixr-d3
       #startup-config: configs/rt-prov2.cfg 
-    
+
+    DNS-google:
+      kind: linux
+      image: docker.io/esanchezv/kaliipv6:latest  
+
+    DNS-cloudflare:
+      kind: linux
+      image: docker.io/esanchezv/kaliipv6:latest  
 
   links:
     - endpoints: ["rt-provider1:e1-1", "rt-core:e1-1"]
@@ -50,4 +57,7 @@ topology:
     - endpoints: ["rt-provider2:e1-2", "rt-transit:e1-2"]
     - endpoints: ["rt-transit:e1-3", "rt-google:e1-1"]
     - endpoints: ["rt-transit:e1-4", "rt-cloudflare:e1-1"]
+    - endpoints: ["rt-google:e1-2", "DNS-google:eth1"]
+    - endpoints: ["rt-cloudflare:e1-2", "DNS-cloudflare:eth1"]
+    
 
