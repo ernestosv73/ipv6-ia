@@ -52,7 +52,10 @@ topology:
 
     cliente-ISP:
       kind: linux
-      image: docker.io/esanchezv/kaliipv6:latest  
+      image: docker.io/esanchezv/kaliipv6:latest 
+      exec:
+       - ip -6 address add 2001:db8:100::10/64 dev eth1 
+       - ip -6 route add default via 2001:db8:100::1       
 
     mgmt-ISP:
       kind: linux
