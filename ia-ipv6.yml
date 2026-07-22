@@ -45,6 +45,9 @@ topology:
     DNS-google:
       kind: linux
       image: docker.io/esanchezv/kaliipv6:latest  
+      exec:
+       - ip -6 address add 2001:db8:700::53/64 dev eth1 
+       - ip -6 route add default via 2001:db8:700::1       
 
     DNS-cloudflare:
       kind: linux
