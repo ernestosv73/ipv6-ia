@@ -10,7 +10,7 @@ topology:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
       type: ixr-d3
-      startup-config: configs/prov1.cfg 
+      #startup-config: configs/prov1.cfg 
 
     rt-provider2:
       kind: nokia_srlinux
@@ -22,19 +22,19 @@ topology:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
       type: ixr-d3
-      startup-config: configs/core.cfg 
+      #startup-config: configs/core.cfg 
 
     rt-transit:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
       type: ixr-d3
-      startup-config: configs/rt-transit.cfg 
+      #startup-config: configs/rt-transit.cfg 
 
     rt-google:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
       type: ixr-d3
-      startup-config: configs/rt-google.cfg   
+      #startup-config: configs/rt-google.cfg   
 
     rt-cloudflare:
       kind: nokia_srlinux
