@@ -40,7 +40,7 @@ topology:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
       type: ixr-d3
-      #startup-config: configs/rt-prov2.cfg 
+      startup-config: configs/rt-cf.cfg 
 
     DNS-google:
       kind: linux
