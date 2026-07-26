@@ -22,7 +22,7 @@ topology:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
       type: ixr-d3
-      startup-config: configs/core.cfg 
+      #startup-config: configs/core.cfg 
 
     rt-transit:
       kind: nokia_srlinux
