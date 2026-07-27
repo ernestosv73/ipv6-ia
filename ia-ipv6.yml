@@ -65,7 +65,7 @@ topology:
 
     mgmt-ISP:
       kind: linux
-      image: docker.io/esanchezv/kaliipv6:latest    
+      image: docker.io/esanchezv/kali-python3:latest  
 
   links:
     - endpoints: ["rt-provider1:e1-1", "rt-core:e1-1"]
